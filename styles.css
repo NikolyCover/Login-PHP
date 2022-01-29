@@ -11,6 +11,7 @@
 body {
     background-image: linear-gradient(45deg, #194224, #182740);
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
