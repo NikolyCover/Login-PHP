@@ -12,7 +12,7 @@ if(empty($_POST['user']) || empty($_POST['password'])) {
 $email = $_POST['user'];
 $password = $_POST['password'];
 
-$query = "SELECT id_user, email FROM user WHERE email = '{$email}' AND password = '{$password}'";
+$query = "SELECT user_id, email FROM user WHERE email = '{$email}' AND password = '{$password}'";
 
 $result = mysqli_query($connection, $query);
 
