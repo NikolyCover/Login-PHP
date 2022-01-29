@@ -32,6 +32,22 @@ session_start()
         unset($_SESSION['unauthenticated']);
 
         ?>
+        
+        <?php
+        
+        if(isset($_SESSION['registered'])):
+
+        ?>
+        <div id="registered">
+            Cadastro realizado com sucesso!
+        </div>
+        <?php
+
+        endif;
+
+        unset($_SESSION['registered']);
+
+        ?>
 
         <form action="login.php" method="POST">
                 <div class="textfield">

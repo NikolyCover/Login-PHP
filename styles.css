@@ -80,6 +80,14 @@ form .submit:active {
     margin-bottom: 4%;
 }
 
+#registered {
+    background-color: #58f583;
+    color: #071211;
+    border-radius: 8px;
+    padding: 4%;
+    margin-bottom: 4%;
+}
+
 #sing-up {
     margin-top: 4%;
 }

@@ -16,7 +16,8 @@ $password = $_POST['password'];
 $query = "INSERT INTO user (email, password, name) VALUES ('{$email}', '{$password}', '{$name}')";
 
 if (mysqli_query($connection, $query)) {
-  echo "New record created successfully";
+    $_SESSION['registered'] = true;
+    header('Location: index.php');
 } else {
   echo "Error: " . $query . "<br>" . mysqli_error($connection);
 }
