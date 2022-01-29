@@ -38,7 +38,7 @@ session_start()
         if(isset($_SESSION['registered'])):
 
         ?>
-        <div id="registered">
+        <div class="registered">
             Cadastro realizado com sucesso!
         </div>
         <?php

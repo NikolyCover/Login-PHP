@@ -12,7 +12,7 @@ if(empty($_POST['name']) || empty($_POST['user']) || empty($_POST['password']) |
 $name = $_POST['name'];
 $email = $_POST['user'];
 $password = $_POST['password'];
-$confir = $_POST['password-confirmation'];
+$confirm = $_POST['password-confirmation'];
 
 if($password != $confirm) {
     $_SESSION['differentPw'] = true;
