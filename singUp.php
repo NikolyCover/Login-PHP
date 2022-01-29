@@ -16,7 +16,7 @@ session_start()
 <body>
     <div class="card">
         <h1>Cadastro</h1>
-        <form action="singUp.php" method="POST">
+        <form action="register.php" method="POST">
                 <div class="textfield">
                     <label for="name">Nome:</label>
                     <input type="text" name="name" placeholder="nome completo" required>
