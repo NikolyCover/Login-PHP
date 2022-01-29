@@ -22,7 +22,7 @@ session_start()
         if(isset($_SESSION['unauthenticated'])):
 
         ?>
-        <div id="wrong-login">
+        <div class="error">
             Email e/ou senha inválidos.
         </div>
         <?php

@@ -73,14 +73,14 @@ form .submit:active {
     color: #FFF;
 }
 
-#wrong-login {
+.error {
     background-color: #851d1c;
     border-radius: 8px;
     padding: 4%;
     margin-bottom: 4%;
 }
 
-#registered {
+.registered {
     background-color: #58f583;
     color: #071211;
     border-radius: 8px;

@@ -16,6 +16,23 @@ session_start()
 <body>
     <div class="card">
         <h1>Cadastro</h1>
+
+        <?php
+        
+        if(isset($_SESSION['differentPw'])):
+
+        ?>
+        <div class="error">
+            Senhas diferentes.
+        </div>
+        <?php
+
+        endif;
+
+        unset($_SESSION['differentPW']);
+
+        ?>
+
         <form action="register.php" method="POST">
                 <div class="textfield">
                     <label for="name">Nome:</label>
