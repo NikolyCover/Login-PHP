@@ -8,23 +8,12 @@
 
     <style rel="stylesheet">
         body {
-            background: url(https://c.tenor.com/zoD-a4zYa-EAAAAC/entrapta-entrapdak.gif) no-repeat;
+            background: url(https://c.tenor.com/zoD-a4zYa-EAAAAC/entrapta-entrapdak.gif) repeat;
             background-size: cover;
-        }
-
-        h1 {
-            color: #FFF;
-            position: absolute;
-            bottom: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, .7);
-            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Oh, right!</h1>
 </body>
 </html>
 

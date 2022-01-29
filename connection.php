@@ -1,13 +1,5 @@
 <?php
 
-/*define('HOST', '127.0.0.1');
-define('USER', 'root');
-define('PASSWORD', '');
-define('DB', 'login');
-
-$connection = mysqli_connect(HOST, USER, PASSWORD, DB) or die ('Não foi possível conectar');*/
-
-//Get Heroku ClearDB connection information
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $cleardb_server = $cleardb_url["host"];
 $cleardb_username = $cleardb_url["user"];
