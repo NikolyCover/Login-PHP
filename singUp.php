@@ -11,29 +11,16 @@ session_start()
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Login</title>
+    <title>Cadastro</title>
 </head>
 <body>
     <div class="card">
-        <h1>Login</h1>
-
-        <?php
-        
-        if(isset($_SESSION['unauthenticated'])):
-
-        ?>
-        <div id="wrong-login">
-            Email e/ou senha inválidos.
-        </div>
-        <?php
-
-        endif;
-
-        unset($_SESSION['unauthenticated']);
-
-        ?>
-
-        <form action="login.php" method="POST">
+        <h1>Cadastro</h1>
+        <form action="singUp.php" method="POST">
+                <div class="textfield">
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" placeholder="nome completo" required>
+                </div>
                 <div class="textfield">
                     <label for="user">Email:</label>
                     <input type="email" name="user" placeholder="example@domain.com" required>
@@ -42,9 +29,13 @@ session_start()
                     <label for="password">Senha:</label>
                     <input type="password" name="password" placeholder="senha" required>
                 </div>
-                <input class="submit" type="submit" value="Entrar">
+                <div class="textfield">
+                    <label for="password-confirmation">Confirmação de senha:</label>
+                    <input type="password" name="password-confirmation" placeholder="digite sua senha novamente" required>
+                </div>
+                <input class="submit" type="submit" value="Cadastrar">
         </form>
-        <p id="sing-up">Ainda não tem uma conta? <a href="singUp.php">Cadastrar-se</a></p>
+        <p id="sing-up">Já tem uma conta? <a href="index.php">Fazer login</a></p>
     </div>
 </body>
 </html>

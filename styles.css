@@ -11,26 +11,27 @@
 body {
     background-image: linear-gradient(45deg, #194224, #182740);
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#login-card {
+.card {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     background-color: #102624;
     width: 32vw;
-    padding: 5%;
+    padding: 4%;
     border-radius: 16px;
+    margin: 50px;
 }
 
 @media screen and (max-width: 1000px) {
-    #login-card {
+    .card {
         width: 80vw;
     }
   }
 
-#login-card h1 {
+.card h1 {
     margin-bottom: 8%;
     text-align: center;
 }
@@ -55,19 +56,19 @@ form input {
     outline: solid 1px #FFF;
 }
 
-form #get-in {
+form .submit {
     background-color: #FFF;
     color: #102624;
     transition: all .2s
 }
 
-form #get-in:hover, form #get-in:focus {
+form .submit:hover, form .submit:focus {
     background-color: #071211;
     color: #FFF;
     outline: none;
 }
 
-form #get-in:active {
+form .submit:active {
     background-color: #194224;
     color: #FFF;
 }
@@ -77,4 +78,13 @@ form #get-in:active {
     border-radius: 8px;
     padding: 4%;
     margin-bottom: 4%;
+}
+
+#sing-up {
+    margin-top: 4%;
+}
+
+#sing-up a {
+    color: #58f583;
+    text-decoration: underline;
 }
