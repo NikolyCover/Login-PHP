@@ -17,6 +17,7 @@ $confirm = $_POST['password-confirmation'];
 if($password != $confirm) {
     $_SESSION['differentPw'] = true;
     header('Location: singUp.php');
+    exit();
 }
 
 $query = "INSERT INTO user (email, password, name) VALUES ('{$email}', '{$password}', '{$name}')";
