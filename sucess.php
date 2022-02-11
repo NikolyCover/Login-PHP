@@ -19,6 +19,6 @@
 
 <?php
 
-include('checkLogin.php');
+include('scripts/checkLogin.php');
 
 ?>

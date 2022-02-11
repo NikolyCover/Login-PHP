@@ -1,0 +1,44 @@
+.container {
+    margin: 10vh 0;
+}
+
+.form-fieldset {
+    border: none;
+    padding: 8% 0;
+}
+
+.form-fieldset legend {
+    font-size: 18pt;
+}
+
+.checkbox-container {
+    margin-bottom: 8%;
+}
+
+.checkboxes {
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.checkboxes .field {
+    min-width: 30%;
+}
+
+.checkboxes .field label {
+    margin-left: 8%;
+}
+
+.select-container p {
+    margin-bottom: 4%;
+}
+
+.multiple-select {
+    color: #FFF;
+    background-color: #193532;
+    border: none;
+    padding: 4%;
+    width: 100%;
+    border-radius: 8px;
+}

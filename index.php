@@ -10,11 +10,11 @@ session_start()
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/global.css">
     <title>Login</title>
 </head>
 <body>
-    <div class="card">
+    <main class="container">
         <h1>Login</h1>
 
         <?php
@@ -49,18 +49,18 @@ session_start()
 
         ?>
 
-        <form action="login.php" method="POST">
+        <form action="scripts/login.php" method="POST">
                 <div class="textfield">
                     <label for="user">Email:</label>
-                    <input type="email" name="user" placeholder="example@domain.com" required>
+                    <input class="input" type="email" name="user" placeholder="example@domain.com" required>
                 </div>
                 <div class="textfield">
                     <label for="password">Senha:</label>
-                    <input type="password" name="password" placeholder="senha" required>
+                    <input class="input" type="password" name="password" placeholder="senha" required>
                 </div>
-                <input class="submit" type="submit" value="Entrar">
+                <input class="input submit" type="submit" value="Entrar">
         </form>
-        <p id="sing-up">Ainda não tem uma conta? <a href="singUp.php">Cadastrar-se</a></p>
-    </div>
+        <p class="change-page">Ainda não tem uma conta? <a href="singUp.php">Cadastrar-se</a></p>
+    </main>
 </body>
 </html>
