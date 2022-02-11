@@ -68,27 +68,27 @@ session_start()
                     
                     <div class="checkboxes">
                         <div class="field">
-                            <input type="checkbox" name="hobbys" id="read" value="ler">
+                            <input type="checkbox" name="hobbys[]" id="read" value="ler">
                             <label for="read">Ler</label>
                         </div>
                         <div class="field">
-                            <input type="checkbox" name="hobbys" id="dance" value="dançar">
+                            <input type="checkbox" name="hobbys[]" id="dance" value="dançar">
                             <label for="dance">Dançar</label>
                         </div>
                         <div class="field">
-                            <input type="checkbox" name="hobbys" id="sing" value="cantar">
+                            <input type="checkbox" name="hobbys[]" id="sing" value="cantar">
                             <label for="sing">Cantar</label>
                         </div>
                         <div class="field">
-                            <input type="checkbox" name="hobbys" id="draw" value="desenhar">
+                            <input type="checkbox" name="hobbys[]" id="draw" value="desenhar">
                             <label for="draw">Desenhar</label>
                         </div>
                         <div class="field">
-                            <input type="checkbox" name="hobbys" id="play" value="jogar">
+                            <input type="checkbox" name="hobbys[]" id="play" value="jogar">
                             <label for="play">Jogar</label>
                         </div>
                         <div class="field">
-                            <input type="checkbox" name="hobbys" id="run" value="correr">
+                            <input type="checkbox" name="hobbys[]" id="run" value="correr">
                             <label for="run">Correr</label>
                         </div>
                     </div>
@@ -99,27 +99,27 @@ session_start()
                         
                     <div class="checkboxes">
                         <div class="field">
-                            <input type="checkbox" name="cars" id="fusca" value="fusca">
+                            <input type="checkbox" name="cars[]" id="fusca" value="fusca">
                             <label for="fusca">Fusca</label>
                         </div>
                         <div class="field">
-                            <input type="checkbox" name="cars" id="civic" value="Honda Civic">
+                            <input type="checkbox" name="cars[]" id="civic" value="Honda Civic">
                             <label for="civic">Honda Civic</label>
                         </div>
                         <div class="field">
-                            <input type="checkbox" name="cars" id="mareia" value="Mareia">
+                            <input type="checkbox" name="cars[]" id="mareia" value="Mareia">
                             <label for="mareia">Mareia</label>
                         </div>
                         <div class="field">
-                            <input type="checkbox" name="cars" id="sandero" value="Sandero">
+                            <input type="checkbox" name="cars[]" id="sandero" value="Sandero">
                             <label for="sandero">Sandero</label>
                         </div>
                         <div class="field">
-                            <input type="checkbox" name="cars" id="montana" value="Montana">
+                            <input type="checkbox" name="cars[]" id="montana" value="Montana">
                             <label for="montana">Montana</label>
                         </div>
                         <div class="field">
-                            <input type="checkbox" name="cars" id="tt" value="Audi TT">
+                            <input type="checkbox" name="cars[]" id="tt" value="Audi TT">
                             <label for="tt">Audi TT</label>
                         </div>
                     </div>
@@ -128,7 +128,7 @@ session_start()
                 <div class="select-container">
                     <p>Escolha sua modalidade de esporte favorita: </p>
 
-                    <select class="multiple-select">
+                    <select class="multiple-select" name="sport">
                         <option value="Atletismo">Atletismo</option>
                         <option value="Basquete">Basquete</option>
                         <option value="Futebol de campo">Futebol de campo</option>
