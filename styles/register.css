@@ -28,6 +28,7 @@
 
 .checkboxes .field label {
     margin-left: 8%;
+    word-wrap: break-word;
 }
 
 .select-container p {

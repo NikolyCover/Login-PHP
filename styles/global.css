@@ -10,8 +10,7 @@
 
 body {
     background-image: linear-gradient(45deg, #194224, #182740);
-    background-size: cover;
-    background-attachment: fixed;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,16 +18,22 @@ body {
 
 .container {
     background-color: #102624;
-    width: 32vw;
+    width: 40vw;
     padding: 4%;
     border-radius: 16px;
 }
 
 @media screen and (max-width: 1000px) {
-    .card {
+    .container {
+        width: 64vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
         width: 80vw;
     }
-  }
+}
 
 .container h1 {
     margin-bottom: 8%;
@@ -72,19 +77,20 @@ form .input {
     color: #FFF;
 }
 
-.error {
-    background-color: #851d1c;
+.error, .registered {
     border-radius: 8px;
     padding: 4%;
+    padding: 4%;
     margin-bottom: 4%;
+}
+
+.error {
+    background-color: #851d1c;
 }
 
 .registered {
     background-color: #58f583;
     color: #071211;
-    border-radius: 8px;
-    padding: 4%;
-    margin-bottom: 4%;
 }
 
 .change-page {
