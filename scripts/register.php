@@ -39,19 +39,18 @@ foreach($_POST['cars'] as $car) {
 
 $sport = $_POST['sport'];
 
-$loginQuery = "INSERT INTO user (email, password, name) VALUES ('{$email}', '{$password}', '{$name}');";
+$loginQuery = "INSERT INTO user (email, password, name) VALUES ('{$email}', '{$password}', '{$name}')";
 
 if (mysqli_query($connection, $loginQuery)) {
     $user_id = mysqli_query($connection, "SELECT user_id FROM user WHERE user.email = '{$email}' AND user.name = '{$name}'");
-    echo($user_id);
 
     foreach($hobbys as $hobby) {
         $query = "INSERT INTO hobby (hobby_name, user_id) VALUES ('{$hobby}', '{$user_id}'";
         mysqli_query($connection, $query);
     }
     
-    /*$_SESSION['registered'] = true;
-    header('Location: ../index.php');*/
+    $_SESSION['registered'] = true;
+    header('Location: ../index.php');
 } else {
   echo "Error: " . $query . "<br>" . mysqli_error($connection);
 }
