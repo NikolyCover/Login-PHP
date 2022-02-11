@@ -53,4 +53,5 @@ if (mysqli_query($connection, $loginQuery)) {
     header('Location: ../index.php');
 } else {
   echo "Error: " . $query . "<br>" . mysqli_error($connection);
+  header('Location: ../singUp.php');
 }
