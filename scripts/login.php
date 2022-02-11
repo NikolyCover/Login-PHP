@@ -5,7 +5,7 @@ session_start();
 include('connection.php');
 
 if(empty($_POST['user']) || empty($_POST['password'])) {
-    header('Location: index.php');
+    header('Location: ../index.php');
     exit();
 }
 
@@ -20,10 +20,10 @@ $row = mysqli_num_rows($result);
 
 if($row == 1) {
     $_SESSION['user'] = $email;
-    header('Location: sucess.php');
+    header('Location: ../sucess.php');
     exit();
 } else {
     $_SESSION['unauthenticated'] = true;
-    header('Location: index.php');
+    header('Location: ../index.php');
     exit();
 }

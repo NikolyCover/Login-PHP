@@ -5,7 +5,7 @@ session_start();
 include('connection.php');
 
 if(empty($_POST['name']) || empty($_POST['user']) || empty($_POST['password']) || empty($_POST['password-confirmation'])) {
-    header('Location: index.php');
+    header('Location: ../index.php');
     exit();
 }
 
@@ -15,7 +15,7 @@ $confirm = $_POST['password-confirmation'];
 
 if($password != $confirm) {
     $_SESSION['differentPw'] = true;
-    header('Location: singUp.php');
+    header('Location: ../singUp.php');
     exit();
 }
 
@@ -43,6 +43,7 @@ $loginQuery = "INSERT INTO user (email, password, name) VALUES ('{$email}', '{$p
 
 if (mysqli_query($connection, $loginQuery)) {
     $user_id = mysqli_query($connection, "SELECT user_id FROM user WHERE user.email = '{$email}' AND user.name = '{$name}'");
+    echo($user_id);
 
     foreach($hobbys as $hobby) {
         $query = "INSERT INTO hobby (hobby_name, user_id) VALUES ('{$hobby}', '{$user_id}'";
@@ -50,7 +51,7 @@ if (mysqli_query($connection, $loginQuery)) {
     }
     
     $_SESSION['registered'] = true;
-    header('Location: index.php');
+    header('Location: ../index.php');
 } else {
   echo "Error: " . $query . "<br>" . mysqli_error($connection);
 }
