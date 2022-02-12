@@ -52,8 +52,10 @@ $user_id = mysqli_query($connection, "SELECT user_id FROM user WHERE user.email 
 
 $loginQuery = "INSERT INTO user (email, password, name) VALUES ('{$email}', '{$password}', '{$name}')";
 
+
 if (mysqli_query($connection, $loginQuery)) {
-    $user_id = mysqli_query($connection, "SELECT user_id FROM user WHERE email = '{$email}' AND password = '{$password}'");
+    $user_id = mysql_insert_id();
+
     echo $user_id;
 
     $_SESSION['registered'] = true;
