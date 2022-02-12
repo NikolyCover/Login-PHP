@@ -22,23 +22,8 @@ if(!isset($_SESSION['user'])) {
             background: url(https://c.tenor.com/zoD-a4zYa-EAAAAC/entrapta-entrapdak.gif) repeat;
             background-size: cover;
         }
-
-        input {
-            background-color: #e62020;
-            border: none;
-            color: #FFF;
-            border-radius: 10px;
-            padding: 10px 40px;
-            position: absolute;
-            bottom: 4vh;
-            right: 4vw;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
-    <form action="scripts/logOut.php">
-        <input type="submit" value="Sair" name="out">
-    </form>
 </body>
 </html>
