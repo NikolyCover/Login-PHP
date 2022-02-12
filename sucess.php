@@ -1,11 +1,12 @@
 <?php
 
-/*session_start();
+session_start();
 
 if(!$_SESSION['user']) {
     header('Location: ../index.php');
     exit();
-}*/
+}
+
 ?>
 
 <!DOCTYPE html>
