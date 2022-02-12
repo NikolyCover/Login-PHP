@@ -19,7 +19,7 @@ if($password != $confirm) {
     exit();
 }
 
-$name = $_POST['name'];
+/*$name = $_POST['name'];
 $rg = $_POST['rg'];
 $cpf = $_POST['cpf'];
 $celphone = $_POST['celphone'];
@@ -38,17 +38,20 @@ foreach($_POST['cars'] as $car) {
 }
 
 $sport = $_POST['sport'];
+*/
 
-$loginQuery = "INSERT INTO user (email, password, name) VALUES ('{$email}', '{$password}', '{$name}')";
-
-if (mysqli_query($connection, $loginQuery)) {
-    $user_id = mysqli_query($connection, "SELECT user_id FROM user WHERE user.email = '{$email}' AND user.name = '{$name}'");
+/*
+$user_id = mysqli_query($connection, "SELECT user_id FROM user WHERE user.email = '{$email}' AND user.name = '{$name}'");
 
     foreach($hobbys as $hobby) {
         $query = "INSERT INTO hobby (hobby_name, user_id) VALUES ('{$hobby}', '{$user_id}'";
         mysqli_query($connection, $query);
     }
-    
+*/
+
+$loginQuery = "INSERT INTO user (email, password, name) VALUES ('{$email}', '{$password}', '{$name}')";
+
+if (mysqli_query($connection, $loginQuery)) {
     $_SESSION['registered'] = true;
     header('Location: ../index.php');
 } else {
