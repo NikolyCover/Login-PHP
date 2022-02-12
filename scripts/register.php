@@ -54,8 +54,7 @@ $loginQuery = "INSERT INTO user (email, password, name) VALUES ('{$email}', '{$p
 
 
 if (mysqli_query($connection, $loginQuery)) {
-    $user_id = mysql_insert_id();
-
+    $user_id = mysqli_insert_id($connection);
     echo $user_id;
 
     $_SESSION['registered'] = true;
