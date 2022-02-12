@@ -19,6 +19,7 @@ $result = mysqli_query($connection, $query);
 $row = mysqli_num_rows($result);
 
 if($row == 1) {
+    $_SESSION['user'] = $email;
     header('Location: ../sucess.php');
     exit();
 } else {
