@@ -48,7 +48,7 @@ if (mysqli_query($connection, $loginQuery)) {
     mysqli_query($connection, $query);
 
     $_SESSION['registered'] = true;
-    /*header('Location: ../index.php');*/
+    header('Location: ../index.php');
 } else {
   echo "Error: " . $query . "<br>" . mysqli_error($connection);
   header('Location: ../singUp.php');
