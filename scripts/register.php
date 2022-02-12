@@ -20,42 +20,32 @@ if($password != $confirm) {
 }
 
 $name = $_POST['name'];
-/*
 $rg = $_POST['rg'];
 $cpf = $_POST['cpf'];
 $celphone = $_POST['celphone'];
 $adress = $_POST['adress'];
-
-$hobbys = array();
-
-foreach($_POST['hobbys'] as $hobby) {
-    $hobby.array_push($hobby);
-}
-
-$cars = array();
-
-foreach($_POST['cars'] as $car) {
-    $cars.array_push($car);
-}
-*/
+$hobbys = $_POST['hobbys'];
+$cars = $_POST['cars'];
 $sport = $_POST['sport'];
-
-
-/*
-$user_id = mysqli_query($connection, "SELECT user_id FROM user WHERE user.email = '{$email}' AND user.name = '{$name}'");
-
-    foreach($hobbys as $hobby) {
-        $query = "INSERT INTO hobby (hobby_name, user_id) VALUES ('{$hobby}', '{$user_id}'";
-        mysqli_query($connection, $query);
-    }
-*/
 
 $loginQuery = "INSERT INTO user (email, password, name) VALUES ('{$email}', '{$password}', '{$name}')";
 
 
 if (mysqli_query($connection, $loginQuery)) {
     $user_id = mysqli_insert_id($connection);
-    echo $user_id;
+    
+    foreach($hobbys as $hobby) {
+        $query = "INSERT INTO hobby (hobby_name, user_id) VALUES ('{$hobby}', '{$user_id}')";
+        mysqli_query($connection, $query);
+    }
+    
+    foreach($cars as $car) {
+        $query = "INSERT INTO car (car_name, user_id) VALUES ('{$car}', '{$user_id}')";
+        mysqli_query($connection, $query);
+    }
+
+    $query = "INSERT INTO sport (sport_name, user_id) VALUES ('{$sport}', '{$user_id}')";
+    mysqli_query($connection, $query);
 
     $_SESSION['registered'] = true;
     /*header('Location: ../index.php');*/
